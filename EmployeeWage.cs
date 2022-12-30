@@ -9,11 +9,11 @@ namespace EmployeeWageNonStatic
     class EmployeeWage
     {
 
-        public  void Employeewage()
+        public  void SwitchCase()
         {
-            int IS_FULL_TIME = 1;
-            int EMP_RATE_PER_HOUR = 20;
-            int IS_PART_TIME = 2;
+            const int IS_FULL_TIME = 1;
+            const int EMP_RATE_PER_HOUR = 20;
+            const int IS_PART_TIME = 2;
 
             int empHrs = 0;
             int empWage = 0;
@@ -21,20 +21,18 @@ namespace EmployeeWageNonStatic
             Random random = new Random();
             int empCheck = random.Next(3);
 
-            if (empCheck == IS_FULL_TIME)
+            switch (empCheck)
             {
-                Console.WriteLine("Employee is Present");
-                empHrs = 8;
-            }
-            else if (empCheck == IS_PART_TIME)
-            {
-                Console.WriteLine("Employye is Part time");
-                empHrs = 4;
-            }
-            else
-            {
-                Console.WriteLine("Employee is Absent");
-                empHrs = 0;
+                case IS_FULL_TIME:
+                    empHrs = 8;
+                    break;
+                case IS_PART_TIME:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+
             }
 
             empWage = empHrs * EMP_RATE_PER_HOUR;
