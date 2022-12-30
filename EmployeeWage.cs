@@ -9,34 +9,43 @@ namespace EmployeeWageNonStatic
     class EmployeeWage
     {
 
-        public  void SwitchCase()
+        public  void EmployeeMonthWage()
         {
-            const int IS_FULL_TIME = 1;
-            const int EMP_RATE_PER_HOUR = 20;
-            const int IS_PART_TIME = 2;
+            int IS_FULL_TIME = 1;
+            int EMP_RATE_PER_HOUR = 20;
+            int IS_PART_TIME = 2;
+            int NUM_OF_WORKING_DAYS = 20;
 
             int empHrs = 0;
             int empWage = 0;
+            int totalEmpWage = 0;
 
-            Random random = new Random();
-            int empCheck = random.Next(3);
-
-            switch (empCheck)
+            for (int i = 1; i <= NUM_OF_WORKING_DAYS; i++)
             {
-                case IS_FULL_TIME:
+                Random random = new Random();
+                int empCheck = random.Next(3);
+
+                if (empCheck == IS_FULL_TIME)
+                {
+                    //Console.WriteLine("Employee is Present");
                     empHrs = 8;
-                    break;
-                case IS_PART_TIME:
+                }
+                else if (empCheck == IS_PART_TIME)
+                {
+                    //Console.WriteLine("Employye is Part time");
                     empHrs = 4;
-                    break;
-                default:
+                }
+                else
+                {
+                    // Console.WriteLine("Employee is Absent");
                     empHrs = 0;
-                    break;
+                }
 
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                Console.WriteLine("The Employee day " + i + " Wage is " + empWage);
+                totalEmpWage += empWage;
             }
-
-            empWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("The Employee Wage is " + empWage);
+            Console.WriteLine("The Employee MonthWage is " + totalEmpWage);
         }
     }
     
