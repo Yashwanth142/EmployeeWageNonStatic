@@ -9,19 +9,23 @@ namespace EmployeeWageNonStatic
     class EmployeeWage
     {
 
-        public  void EmployeeMonthWage()
+        public  void Employeewage()
         {
             int IS_FULL_TIME = 1;
             int EMP_RATE_PER_HOUR = 20;
             int IS_PART_TIME = 2;
             int NUM_OF_WORKING_DAYS = 20;
+            int MAX_HRS_IN_MONTH = 100;
 
             int empHrs = 0;
             int empWage = 0;
             int totalEmpWage = 0;
+            int totalEmpHrs = 0;
+            int totalWorkingdays = 0;
 
-            for (int i = 1; i <= NUM_OF_WORKING_DAYS; i++)
+            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingdays < NUM_OF_WORKING_DAYS)
             {
+                totalWorkingdays++;
                 Random random = new Random();
                 int empCheck = random.Next(3);
 
@@ -41,11 +45,12 @@ namespace EmployeeWageNonStatic
                     empHrs = 0;
                 }
 
-                empWage = empHrs * EMP_RATE_PER_HOUR;
-                Console.WriteLine("The Employee day " + i + " Wage is " + empWage);
-                totalEmpWage += empWage;
+                totalEmpHrs += empHrs;
+                Console.WriteLine("DAy# " + totalWorkingdays + " hours is " + empHrs);
+
             }
-            Console.WriteLine("The Employee MonthWage is " + totalEmpWage);
+            totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("The Employee Total Wage is " + totalEmpWage);
         }
     }
     
