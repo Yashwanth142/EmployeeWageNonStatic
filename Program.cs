@@ -6,6 +6,9 @@
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
 
+            EmployeeWage obj= new EmployeeWage();
+            obj.CheckAttendance();
+
         }
     }
 }
