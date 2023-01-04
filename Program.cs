@@ -5,8 +5,9 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
-            EmployeeWage Refactor = new EmployeeWage();
-            Refactor.Cal_Wage();
+            EmployeeWage obj = new EmployeeWage();
+            obj.Cal_Wage("Deloitte", 20, 15, 80);
+            obj.Cal_Wage("Adobe", 25, 10, 60);
 
         }
     }
