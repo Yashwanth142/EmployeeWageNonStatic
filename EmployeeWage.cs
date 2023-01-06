@@ -11,7 +11,7 @@ namespace EmployeeWageNonStatic
 
         private Array[] CompanywageArray;
         private int noOfCompany = 0;
-        public  employeeWageCompanyArray()
+        public EmployeeWage()
         {
             this.CompanywageArray = new Array[5];
         }
