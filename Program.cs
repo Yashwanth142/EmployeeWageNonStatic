@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
 
-            employeeWageCompanyArray obj = new employeeWageCompanyArray();
+            EmployeeWage obj = new EmployeeWage();
 
 
             obj.addCompanies("deloitte", 20, 15, 90);
