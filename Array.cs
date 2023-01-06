@@ -27,7 +27,7 @@ namespace EmployeeWageNonStatic
         }
         public string toString()
         {
-            return "the company : " + this.Company + " total work is :  " + this.Monthwork;
+            return "The company : " + this.Company + " total work is :  " + this.Monthwork;
         }
     }
 }
