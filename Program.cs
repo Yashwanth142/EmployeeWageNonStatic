@@ -8,12 +8,9 @@
 
             EmployeeWage obj = new EmployeeWage();
 
-
-            obj.addCompanies("deloitte", 20, 15, 90);
-
-            obj.addCompanies("adobe", 25, 10, 80);
+            obj.addCompanies("deloite", 10, 15, 90);
+            obj.addCompanies("Dell", 35, 20, 100);
             obj.computeWage();
-
         }
     }
 }
